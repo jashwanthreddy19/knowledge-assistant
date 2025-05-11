@@ -47,18 +47,27 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 🔐 Setup .env File
-Create a .env file in the root of your project and add the necessary keys:
+Create a .env file in the src folder of your project and add the necessary keys:
 
 env
 # Example .env file
 
 # HuggingFace API key (required for HuggingFaceEndpoint)
+```bash
 HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_token_here
-
+```
 # OpenAI-style API (optional, if using ChatOpenAI agent)
+```bash
 OPENAI_API_KEY=your_openai_key_here
 OPENAI_API_BASE=https://api.aimlapi.com/v1
-⚠️ Note: You must request access to use gated models like Gemma or Llama.
+```
+I am using the Gemini model for this project, you can get the API KEY from :
+https://aistudio.google.com/app/apikey
+example .env file for using GEMINI MODEL :
+```bash
+GOOGLE_API_KEY = "YOUR_API_KEY_HERE"
+```
+⚠️ Note: You must request access to use gated models like Gemma or Llama if you want to use them.
 
 📄 Add Your Documents
 Place your .txt files in the docs/ directory. These will be loaded, chunked, and indexed when the app runs.
