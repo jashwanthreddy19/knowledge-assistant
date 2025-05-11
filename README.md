@@ -23,7 +23,7 @@ An intelligent, modular knowledge assistant built using:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/knowledge-assistant.git
+git clone [https://github.com/<your-username>/knowledge-assistant](https://github.com/jashwanthreddy19/knowledge-assistant).git
 cd knowledge-assistant
 ```
 2. Create a Python Virtual Environment
