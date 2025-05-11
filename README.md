@@ -63,6 +63,7 @@ OPENAI_API_BASE=https://api.aimlapi.com/v1
 ```
 I am using the Gemini model for this project, you can get the API KEY from :
 https://aistudio.google.com/app/apikey
+
 example .env file for using GEMINI MODEL :
 ```bash
 GOOGLE_API_KEY = "YOUR_API_KEY_HERE"
@@ -70,7 +71,9 @@ GOOGLE_API_KEY = "YOUR_API_KEY_HERE"
 ⚠️ Note: You must request access to use gated models like Gemma or Llama if you want to use them.
 
 📄 Add Your Documents
-Place your .txt files in the docs/ directory. These will be loaded, chunked, and indexed when the app runs.
+Place your .txt files in the data/ directory. These will be loaded, chunked, and indexed when the app runs.
+
+Additionaly you can upload the .txt files from the web interface.
 
 💡 Running the App
 ```bash
@@ -84,7 +87,7 @@ http://localhost:8501
 ```bash
 knowledge-assistant/
 │
-├── docs/                   # Your input text documents
+├── data/                   # Your input text documents
 ├── logs/                   # Log files
 ├── src/
 │   ├── app.py              # Streamlit frontend
@@ -93,9 +96,9 @@ knowledge-assistant/
 │   ├── embed_index.py      # Builds FAISS index
 │   ├── llm.py              # LLM wrapper (calls HuggingFace/OpenAI)
 │   ├── tools.py            # Tools: Calculator & RAG
-│   └── logger.py           # Logging setup
+│   ├── logger.py           # Logging setup
+|   └── .env                # API keys (not committed)
 │
-├── .env                    # API keys (not committed)
 ├── requirements.txt
 └── README.md
 ```
@@ -109,3 +112,5 @@ Knowledge:
 
 Who is Virat Kohli?
 → Retrieves and summarizes from virat.txt.
+
+NOTE : The Agent only answers based on the documents provided. and also answers the simple math given to it.
