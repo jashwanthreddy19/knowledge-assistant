@@ -102,6 +102,12 @@ knowledge-assistant/
 ├── requirements.txt
 └── README.md
 ```
+
+# System Design
+
+![Image](https://github.com/user-attachments/assets/4a8b4ea4-3489-489e-adae-f378348b154e)
+
+
 ✨ Sample Query Examples
 Math:
 
